@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         card.style.animation = 'fadeIn 0.4s ease forwards';
                     } else {
                         card.style.display = 'none';
-                    </div>
+                    }
                 });
             });
         });
