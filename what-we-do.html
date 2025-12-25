@@ -4,280 +4,282 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Comprehensive OT/ICS cybersecurity services tailored to protect critical infrastructure">
+    <meta name="keywords" content="OT security services, ICS auditing, penetration testing, incident response">
+    <meta name="author" content="ICS Group">
     <title>What We Do - ICS Group</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="min-h-screen flex flex-col m-0 p-0">
-        <!-- Header -->
-        <header>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="ICS Group Logo" class="logo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="what-we-do.html" class="active">What We Do</a>
+                <a href="resources.html">Resources</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
             <div class="container">
-                <div class="flex-container">
-                    <a href="index.html" class="flex items-center">
-                        <img src="assets/images/logo.svg" alt="ICS Group Logo" style="height: 3rem; width: auto;">
-                    </a>
-                    <nav class="hidden md:flex items-center space-x-8">
-                        <a href="index.html">Home</a>
-                        <a href="what-we-do.html" class="active">What We Do</a>
-                        <a href="resources.html">Resources</a>
-                        <a href="contact.html">Contact</a>
-                    </nav>
+                <h1 class="font-heading">What We Do</h1>
+                <p>Comprehensive OT/ICS cybersecurity services tailored to protect critical infrastructure</p>
+            </div>
+        </section>
+
+        <!-- Our Services Section -->
+        <section class="section bg-white">
+            <div class="container">
+                <div class="text-center mb-16">
+                    <h2 class="font-heading">Our Services</h2>
+                    <p class="card-text" style="max-width: 48rem; margin: 0 auto;">
+                        We provide specialized security solutions designed specifically for operational technology and
+                        industrial control systems
+                    </p>
+                </div>
+                <div class="grid grid-cols-3">
+                    <div class="card card-service">
+                        <div class="card-icon">
+                            <img src="assets/icons/shield-check.svg" alt="Audit & Compliance">
+                        </div>
+                        <h3 class="card-title font-heading">Audit & Compliance</h3>
+                        <p class="card-text">
+                            Comprehensive security audits, gap analysis, and regulatory compliance consulting for
+                            frameworks such as IEC 62443, NERC CIP, and ISO 27001.
+                        </p>
+                    </div>
+                    <div class="card card-service">
+                        <div class="card-icon">
+                            <img src="assets/icons/search-security.svg" alt="VA & Pen-Testing">
+                        </div>
+                        <h3 class="card-title font-heading">VA & Pen-Testing</h3>
+                        <p class="card-text">
+                            In-depth vulnerability assessments using NIST 800-82 and MITRE ATT&CK for ICS
+                            methodologies, along with penetration testing tailored for SCADA, DCS, and other industrial
+                            control environments.
+                        </p>
+                    </div>
+                    <div class="card card-service">
+                        <div class="card-icon">
+                            <img src="assets/icons/monitor-security.svg" alt="Managed Services">
+                        </div>
+                        <h3 class="card-title font-heading">Managed Services</h3>
+                        <p class="card-text">
+                            Robust protection for industrial operations by delivering continuous security monitoring and
+                            rapid incident response in OT/ICS environments, minimizing downtime critical processes.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </header>
+        </section>
 
-        <!-- Main Content -->
-        <main class="flex-grow">
-            <div class="bg-white text-gray-900">
-                <!-- Hero Section -->
-                <section class="bg-gradient-purple py-24">
-                    <div class="max-w-7xl mx-auto px-6">
-                        <div class="text-center max-w-4xl mx-auto">
-                            <h1 class="text-5xl md:text-6xl font-bold text-white mb-8 leading-tight font-zen-dots">
-                                What We Do
-                            </h1>
-                            <p class="text-2xl text-gray-100 leading-relaxed">
-                                Comprehensive OT/ICS cybersecurity services tailored to protect critical infrastructure
-                            </p>
-                        </div>
+        <!-- Detailed Services Section -->
+        <section class="section bg-gray-50">
+            <div class="container">
+                <!-- Security Assessment -->
+                <div class="grid grid-cols-2 mb-16" style="align-items: center;">
+                    <div>
+                        <img src="assets/images/security-assessment.jpg" alt="Security Assessment" 
+                             style="width: 100%; height: 400px; object-fit: cover; border-radius: var(--radius-lg);">
                     </div>
-                </section>
-
-                <!-- Our Services Section -->
-                <section class="bg-white py-20">
-                    <div class="max-w-7xl mx-auto px-6">
-                        <div class="text-center mb-16">
-                            <h2 class="text-5xl font-bold text-gray-900 mb-4 font-zen-dots">Our Services</h2>
-                            <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-                                We provide specialized security solutions designed specifically for operational technology and
-                                industrial control systems
-                            </p>
-                        </div>
-                        <div class="grid md:grid-cols-3 gap-8">
-                            <div class="service-card">
-                                <div class="service-icon">
-                                    <img src="assets/icons/shield-check.svg" alt="Audit & Compliance" class="w-20 h-20">
-                                </div>
-                                <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center font-zen-dots">
-                                    Audit & Compliance
-                                </h3>
-                                <p class="text-lg text-gray-700 leading-relaxed">
-                                    Comprehensive security audits, gap analysis, and regulatory compliance consulting for
-                                    frameworks such as IEC 62443, NERC CIP, and ISO 27001.
-                                </p>
-                            </div>
-                            <div class="service-card">
-                                <div class="service-icon">
-                                    <img src="assets/icons/search-security.svg" alt="VA & Pen-Testing" class="w-20 h-20">
-                                </div>
-                                <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center font-zen-dots">
-                                    VA & Pen-Testing
-                                </h3>
-                                <p class="text-lg text-gray-700 leading-relaxed">
-                                    In-depth vulnerability assessments using NIST 800-82 and MITRE ATT&CK for ICS
-                                    methodologies, along with penetration testing tailored for SCADA, DCS, and other industrial
-                                    control environments.
-                                </p>
-                            </div>
-                            <div class="service-card">
-                                <div class="service-icon">
-                                    <img src="assets/icons/monitor-security.svg" alt="Managed Services" class="w-20 h-20">
-                                </div>
-                                <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center font-zen-dots">
-                                    Managed Services
-                                </h3>
-                                <p class="text-lg text-gray-700 leading-relaxed">
-                                    Robust protection for industrial operations by delivering continuous security monitoring and
-                                    rapid incident response in OT/ICS environments, minimizing downtime critical processes.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Detailed Services Section -->
-                <section class="bg-gray-50 py-20">
-                    <div class="max-w-7xl mx-auto px-6">
-                        <div style="display: flex; flex-direction: column; gap: 4rem;">
-                            <!-- Security Assessment -->
-                            <div class="grid md:grid-cols-2 gap-12 items-center">
-                                <div>
-                                    <div class="relative h-96 rounded-lg overflow-hidden">
-                                        <img src="assets/images/security-assessment.svg" alt="Security Assessment" style="width: 100%; height: 100%; object-fit: cover;">
-                                        <div class="gradient-overlay-purple"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h3 class="text-4xl font-bold text-gray-900 mb-6 font-zen-dots">
-                                        Security Assessment
-                                    </h3>
-                                    <p class="text-xl text-gray-700 leading-relaxed mb-6">
-                                        Our comprehensive security assessments identify vulnerabilities in your OT/ICS environment
-                                        before they can be exploited. We use industry-standard methodologies and frameworks to
-                                        ensure thorough coverage.
-                                    </p>
-                                    <ul class="styled-list text-lg text-gray-700">
-                                        <li>Network architecture review</li>
-                                        <li>Asset inventory and classification</li>
-                                        <li>Risk analysis and prioritization</li>
-                                        <li>Compliance gap analysis</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- Incident Response -->
-                            <div class="grid md:grid-cols-2 gap-12 items-center">
-                                <div class="order-2 md:order-1">
-                                    <h3 class="text-4xl font-bold text-gray-900 mb-6 font-zen-dots">Incident Response</h3>
-                                    <p class="text-xl text-gray-700 leading-relaxed mb-6">
-                                        When security incidents occur, rapid response is critical. Our team provides 24/7 incident
-                                        response services to minimize impact and restore operations quickly.
-                                    </p>
-                                    <ul class="styled-list text-lg text-gray-700">
-                                        <li>24/7 emergency response</li>
-                                        <li>Forensic analysis</li>
-                                        <li>Recovery and remediation</li>
-                                        <li>Post-incident reporting</li>
-                                    </ul>
-                                </div>
-                                <div class="order-1 md:order-2">
-                                    <div class="relative h-96 rounded-lg overflow-hidden">
-                                        <img src="assets/images/incident-response.svg" alt="Incident Response" style="width: 100%; height: 100%; object-fit: cover;">
-                                        <div class="gradient-overlay-purple"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Training & Awareness -->
-                            <div class="grid md:grid-cols-2 gap-12 items-center">
-                                <div>
-                                    <div class="relative h-96 rounded-lg overflow-hidden">
-                                        <img src="assets/images/training-awareness.svg" alt="Training & Awareness" style="width: 100%; height: 100%; object-fit: cover;">
-                                        <div class="gradient-overlay-purple"></div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <h3 class="text-4xl font-bold text-gray-900 mb-6 font-zen-dots">
-                                        Training & Awareness
-                                    </h3>
-                                    <p class="text-xl text-gray-700 leading-relaxed mb-6">
-                                        Empower your team with the knowledge and skills needed to maintain a secure OT/ICS
-                                        environment. Our training programs are tailored to your specific operational needs.
-                                    </p>
-                                    <ul class="styled-list text-lg text-gray-700">
-                                        <li>Security awareness training</li>
-                                        <li>Technical skills development</li>
-                                        <li>Tabletop exercises</li>
-                                        <li>Certification preparation</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Methodologies Section -->
-                <section class="bg-white py-20">
-                    <div class="max-w-7xl mx-auto px-6">
-                        <div class="text-center mb-16">
-                            <h2 class="text-5xl font-bold text-gray-900 mb-4 font-zen-dots">Our Methodologies</h2>
-                            <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-                                Industry-standard frameworks and best practices
-                            </p>
-                        </div>
-                        <div class="grid md:grid-cols-4 gap-8">
-                            <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
-                                <div class="flex justify-center mb-4">
-                                    <img src="assets/icons/certificate.svg" alt="IEC 62443" class="w-16 h-16">
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2 font-zen-dots">IEC 62443</h3>
-                                <p class="text-gray-700">Industrial automation security</p>
-                            </div>
-                            <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
-                                <div class="flex justify-center mb-4">
-                                    <img src="assets/icons/certificate.svg" alt="NIST 800-82" class="w-16 h-16">
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2 font-zen-dots">NIST 800-82</h3>
-                                <p class="text-gray-700">ICS security guidelines</p>
-                            </div>
-                            <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
-                                <div class="flex justify-center mb-4">
-                                    <img src="assets/icons/certificate.svg" alt="NERC CIP" class="w-16 h-16">
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2 font-zen-dots">NERC CIP</h3>
-                                <p class="text-gray-700">Critical infrastructure protection</p>
-                            </div>
-                            <div class="bg-gray-50 p-6 rounded-lg text-center hover:shadow-lg transition-shadow">
-                                <div class="flex justify-center mb-4">
-                                    <img src="assets/icons/certificate.svg" alt="ISO 27001" class="w-16 h-16">
-                                </div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2 font-zen-dots">ISO 27001</h3>
-                                <p class="text-gray-700">Information security management</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- CTA Section -->
-                <section class="bg-gradient-purple-horizontal py-16">
-                    <div class="max-w-4xl mx-auto px-6 text-center">
-                        <h2 class="text-4xl font-bold text-white mb-4 font-zen-dots">
-                            Ready to Secure Your Infrastructure?
-                        </h2>
-                        <p class="text-xl text-gray-100 mb-8">
-                            Contact us today to discuss your OT/ICS security needs
+                    <div>
+                        <h3 class="font-heading" style="font-size: 2.25rem;">Security Assessment</h3>
+                        <p class="card-text" style="font-size: 1.25rem; margin-bottom: 1.5rem;">
+                            Our comprehensive security assessments identify vulnerabilities in your OT/ICS environment
+                            before they can be exploited. We use industry-standard methodologies and frameworks to
+                            ensure thorough coverage.
                         </p>
-                        <a href="contact.html" class="btn-secondary">
-                            Get Started
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem;">
+                                <span style="color: var(--color-purple-800); font-size: 1.5rem; margin-right: 0.75rem;">•</span>
+                                <span class="card-text">Network architecture review</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem;">
+                                <span style="color: var(--color-purple-800); font-size: 1.5rem; margin-right: 0.75rem;">•</span>
+                                <span class="card-text">Asset inventory and classification</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem;">
+                                <span style="color: var(--color-purple-800); font-size: 1.5rem; margin-right: 0.75rem;">•</span>
+                                <span class="card-text">Risk analysis and prioritization</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem;">
+                                <span style="color: var(--color-purple-800); font-size: 1.5rem; margin-right: 0.75rem;">•</span>
+                                <span class="card-text">Compliance gap analysis</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Incident Response -->
+                <div class="grid grid-cols-2 mb-16" style="align-items: center;">
+                    <div style="order: 2;">
+                        <img src="assets/images/incident-response.jpg" alt="Incident Response" 
+                             style="width: 100%; height: 400px; object-fit: cover; border-radius: var(--radius-lg);">
+                    </div>
+                    <div style="order: 1;">
+                        <h3 class="font-heading" style="font-size: 2.25rem;">Incident Response</h3>
+                        <p class="card-text" style="font-size: 1.25rem; margin-bottom: 1.5rem;">
+                            When security incidents occur, rapid response is critical. Our team provides 24/7 incident
+                            response services to minimize impact and restore operations quickly.
+                        </p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem;">
+                                <span style="color: var(--color-purple-800); font-size: 1.5rem; margin-right: 0.75rem;">•</span>
+                                <span class="card-text">24/7 emergency response</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem;">
+                                <span style="color: var(--color-purple-800); font-size: 1.5rem; margin-right: 0.75rem;">•</span>
+                                <span class="card-text">Forensic analysis</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem;">
+                                <span style="color: var(--color-purple-800); font-size: 1.5rem; margin-right: 0.75rem;">•</span>
+                                <span class="card-text">Recovery and remediation</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem;">
+                                <span style="color: var(--color-purple-800); font-size: 1.5rem; margin-right: 0.75rem;">•</span>
+                                <span class="card-text">Post-incident reporting</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Training & Awareness -->
+                <div class="grid grid-cols-2" style="align-items: center;">
+                    <div>
+                        <img src="assets/images/training-awareness.jpg" alt="Training & Awareness" 
+                             style="width: 100%; height: 400px; object-fit: cover; border-radius: var(--radius-lg);">
+                    </div>
+                    <div>
+                        <h3 class="font-heading" style="font-size: 2.25rem;">Training & Awareness</h3>
+                        <p class="card-text" style="font-size: 1.25rem; margin-bottom: 1.5rem;">
+                            Empower your team with the knowledge and skills needed to maintain a secure OT/ICS
+                            environment. Our training programs are tailored to your specific operational needs.
+                        </p>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem;">
+                                <span style="color: var(--color-purple-800); font-size: 1.5rem; margin-right: 0.75rem;">•</span>
+                                <span class="card-text">Security awareness training</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem;">
+                                <span style="color: var(--color-purple-800); font-size: 1.5rem; margin-right: 0.75rem;">•</span>
+                                <span class="card-text">Technical skills development</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem;">
+                                <span style="color: var(--color-purple-800); font-size: 1.5rem; margin-right: 0.75rem;">•</span>
+                                <span class="card-text">Tabletop exercises</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem;">
+                                <span style="color: var(--color-purple-800); font-size: 1.5rem; margin-right: 0.75rem;">•</span>
+                                <span class="card-text">Certification preparation</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Methodologies Section -->
+        <section class="section bg-white">
+            <div class="container">
+                <div class="text-center mb-16">
+                    <h2 class="font-heading">Our Methodologies</h2>
+                    <p class="card-text" style="max-width: 48rem; margin: 0 auto;">
+                        Industry-standard frameworks and best practices
+                    </p>
+                </div>
+                <div class="grid grid-cols-4">
+                    <div class="card" style="text-align: center;">
+                        <div class="card-icon">
+                            <img src="assets/icons/certificate.svg" alt="IEC 62443">
+                        </div>
+                        <h3 class="font-heading" style="font-size: 1.25rem;">IEC 62443</h3>
+                        <p class="card-text">Industrial automation security</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div class="card-icon">
+                            <img src="assets/icons/certificate.svg" alt="NIST 800-82">
+                        </div>
+                        <h3 class="font-heading" style="font-size: 1.25rem;">NIST 800-82</h3>
+                        <p class="card-text">ICS security guidelines</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div class="card-icon">
+                            <img src="assets/icons/certificate.svg" alt="NERC CIP">
+                        </div>
+                        <h3 class="font-heading" style="font-size: 1.25rem;">NERC CIP</h3>
+                        <p class="card-text">Critical infrastructure protection</p>
+                    </div>
+                    <div class="card" style="text-align: center;">
+                        <div class="card-icon">
+                            <img src="assets/icons/certificate.svg" alt="ISO 27001">
+                        </div>
+                        <h3 class="font-heading" style="font-size: 1.25rem;">ISO 27001</h3>
+                        <p class="card-text">Information security management</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section style="background: linear-gradient(90deg, var(--color-purple-900) 0%, var(--color-purple-800) 100%); padding: 4rem 0;">
+            <div class="container text-center">
+                <h2 class="text-white font-heading">Ready to Secure Your Infrastructure?</h2>
+                <p class="text-white" style="font-size: 1.25rem; margin-bottom: 2rem;">
+                    Contact us today to discuss your OT/ICS security needs
+                </p>
+                <a href="contact.html" class="btn btn-secondary btn-lg">Get Started</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="grid grid-cols-4 mb-8">
+                <div>
+                    <img src="assets/images/logo.png" alt="ICS Group Logo" class="logo mb-4">
+                    <p>Protecting critical infrastructure through advanced OT/ICS cybersecurity solutions</p>
+                </div>
+                <div>
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="what-we-do.html">Audit & Compliance</a></li>
+                        <li><a href="what-we-do.html">VA & Pen-Testing</a></li>
+                        <li><a href="what-we-do.html">Managed Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="resources.html">Whitepapers</a></li>
+                        <li><a href="resources.html">Case Studies</a></li>
+                        <li><a href="resources.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">
+                            <img src="assets/icons/linkedin.svg" alt="LinkedIn" class="social-icon">
+                        </a>
+                        <a href="#" aria-label="GitHub">
+                            <img src="assets/icons/github.svg" alt="GitHub" class="social-icon">
                         </a>
                     </div>
-                </section>
-            </div>
-        </main>
-
-        <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="grid md:grid-cols-4 gap-8 mb-8">
-                    <div>
-                        <img src="assets/images/logo.svg" alt="ICS Group Logo" class="h-10 w-auto mb-4 brightness-0 invert">
-                        <p class="text-gray-400 text-lg">
-                            Protecting critical infrastructure through advanced OT/ICS cybersecurity solutions
-                        </p>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-4">Services</h3>
-                        <ul class="space-y-2 text-gray-400 text-lg">
-                            <li><a href="#" class="hover:text-white transition-colors">Audit & Compliance</a></li>
-                            <li><a href="#" class="hover:text-white transition-colors">VA & Pen-Testing</a></li>
-                            <li><a href="#" class="hover:text-white transition-colors">Managed Services</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-4">Resources</h3>
-                        <ul class="space-y-2 text-gray-400 text-lg">
-                            <li><a href="#" class="hover:text-white transition-colors">Whitepapers</a></li>
-                            <li><a href="#" class="hover:text-white transition-colors">Case Studies</a></li>
-                            <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-4">Connect</h3>
-                        <div class="social-links">
-                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                                <img src="assets/icons/linkedin.svg" alt="LinkedIn" class="w-8 h-8">
-                            </a>
-                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                                <img src="assets/icons/github.svg" alt="GitHub" class="w-8 h-8">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="border-top">
-                    <p class="text-gray-400 text-lg">© 2025 ICS Group. All Rights Reserved.</p>
                 </div>
             </div>
-        </footer>
-    </div>
+            <div class="footer-bottom">
+                <p>© 2025 ICS Group. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
