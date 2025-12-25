@@ -22,8 +22,24 @@
                 <a href="resources.html" class="active">Resources</a>
                 <a href="contact.html">Contact</a>
             </nav>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
+    
+    <!-- Mobile Menu -->
+    <div class="menu-overlay"></div>
+    <div class="mobile-menu">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="what-we-do.html">What We Do</a>
+            <a href="resources.html">Resources</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
 
     <!-- Main Content -->
     <main>
@@ -156,14 +172,14 @@
         <section class="section bg-gray-50">
             <div class="container">
                 <div class="card shadow-xl" style="padding: 0; overflow: hidden;">
-                    <div class="grid grid-cols-2" style="gap: 0;">
-                        <div style="position: relative; height: 24rem;">
-                            <img src="assets/images/featured-resource.svg" alt="Complete Guide to OT Security" 
-                                 style="width: 100%; height: 100%; object-fit: cover;">
+                    <div class="grid grid-cols-2" style="gap: 0; min-height: 500px;">
+                        <div style="position: relative; overflow: hidden;">
+                            <img src="assets/images/featured-resource.svg" alt="Complete Guide to OT Security"
+                                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div class="p-12 flex" style="flex-direction: column; justify-content: center;">
-                            <span class="resource-badge" style="width: fit-content; margin-bottom: 1rem;">Featured</span>
-                            <h2 class="font-heading">The Complete Guide to OT Security</h2>
+                            <span class="resource-badge" style="width: fit-content; margin-bottom: 1rem; background: var(--color-purple-800); color: white; padding: 0.5rem 1rem; border-radius: var(--radius-md); font-weight: 600; font-size: 0.875rem;">Featured</span>
+                            <h2 class="font-heading" style="margin-bottom: 1rem;">The Complete Guide to OT Security</h2>
                             <p class="card-text" style="font-size: 1.25rem; margin-bottom: 1.5rem;">
                                 A comprehensive resource covering everything from basic concepts to advanced security
                                 strategies for operational technology environments.
