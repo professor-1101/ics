@@ -7,7 +7,7 @@
     <meta name="keywords" content="OT security, ICS cybersecurity, industrial control systems, critical infrastructure">
     <meta name="author" content="ICS Group">
     <title>ICS Group - OT/ICS Cybersecurity Solutions</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <!-- Header -->
@@ -22,8 +22,24 @@
                 <a href="resources.html">Resources</a>
                 <a href="contact.html">Contact</a>
             </nav>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
+
+    <!-- Mobile Menu -->
+    <div class="menu-overlay"></div>
+    <div class="mobile-menu">
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="what-we-do.html">What We Do</a>
+            <a href="resources.html">Resources</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
 
     <!-- Main Content -->
     <main>
@@ -270,5 +286,6 @@
             </div>
         </div>
     </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
