@@ -244,7 +244,7 @@ footer .social-links {
 footer .social-icon {
   width: 2rem;
   height: 2rem;
-  filter: brightness(0) invert(1); /* Make icons white */
+  color: white; /* Make stroke white for currentColor icons */
   transition: opacity var(--transition-base);
 }
 

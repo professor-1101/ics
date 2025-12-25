@@ -1,9 +1,51 @@
-<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
   <defs>
-    <linearGradient id="gradfeaturedresourcejpeg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#581c87;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#6b21a8;stop-opacity:0.2" />
+    </linearGradient>
+    <linearGradient id="accent-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6b21a8;stop-opacity:1" />
     </linearGradient>
   </defs>
-  <rect width="800" height="600" fill="url(#gradfeaturedresourcejpeg)" />
+
+  <rect width="800" height="600" fill="url(#bg-gradient)"/>
+
+  <!-- Large document icon -->
+  <g transform="translate(250, 100)">
+    <!-- Main document -->
+    <rect x="0" y="0" width="300" height="400" rx="8" fill="white" opacity="0.95"/>
+    <rect x="0" y="0" width="300" height="80" rx="8" fill="url(#accent-gradient)"/>
+
+    <!-- Text lines on purple header -->
+    <rect x="30" y="25" width="180" height="12" rx="6" fill="white" opacity="0.9"/>
+    <rect x="30" y="48" width="120" height="8" rx="4" fill="white" opacity="0.7"/>
+
+    <!-- Content lines -->
+    <rect x="30" y="110" width="240" height="8" rx="4" fill="#6b21a8" opacity="0.3"/>
+    <rect x="30" y="135" width="240" height="8" rx="4" fill="#6b21a8" opacity="0.3"/>
+    <rect x="30" y="160" width="200" height="8" rx="4" fill="#6b21a8" opacity="0.3"/>
+
+    <rect x="30" y="200" width="240" height="8" rx="4" fill="#6b21a8" opacity="0.3"/>
+    <rect x="30" y="225" width="220" height="8" rx="4" fill="#6b21a8" opacity="0.3"/>
+    <rect x="30" y="250" width="240" height="8" rx="4" fill="#6b21a8" opacity="0.3"/>
+
+    <rect x="30" y="290" width="240" height="8" rx="4" fill="#6b21a8" opacity="0.3"/>
+    <rect x="30" y="315" width="180" height="8" rx="4" fill="#6b21a8" opacity="0.3"/>
+
+    <!-- Shield badge -->
+    <g transform="translate(220, 320)">
+      <circle cx="30" cy="30" r="35" fill="url(#accent-gradient)"/>
+      <path d="M 30 15 L 35 20 L 30 45 L 25 20 Z" fill="white" opacity="0.9"/>
+      <path d="M 27 28 L 30 31 L 36 23" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </g>
+  </g>
+
+  <!-- Decorative elements -->
+  <circle cx="120" cy="120" r="60" fill="#7c3aed" opacity="0.1"/>
+  <circle cx="680" cy="480" r="80" fill="#6b21a8" opacity="0.1"/>
+  <circle cx="700" cy="150" r="40" fill="#7c3aed" opacity="0.15"/>
+  <circle cx="100" cy="500" r="50" fill="#6b21a8" opacity="0.12"/>
 </svg>
