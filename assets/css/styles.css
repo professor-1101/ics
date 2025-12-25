@@ -1386,7 +1386,7 @@ label {
 
 .search-input {
   width: 100%;
-  padding: 1rem 1.5rem 1rem 4rem;
+  padding: 1rem 1.5rem 1rem 3rem;
   font-size: 1rem;
   border: 2px solid var(--color-gray-300);
   border-radius: var(--radius-lg);
@@ -1396,6 +1396,7 @@ label {
 
 .search-input::placeholder {
   color: var(--color-gray-400);
+  padding-left: 0.5rem;
 }
 
 .search-input:focus {
@@ -1411,6 +1412,8 @@ label {
   transform: translateY(-50%);
   color: var(--color-gray-400);
   pointer-events: none;
+  width: 20px;
+  height: 20px;
 }
 
 .search-input:focus + .search-icon {
