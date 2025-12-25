@@ -600,7 +600,7 @@ input[type="email"],
 input[type="tel"],
 textarea {
   width: 100%;
-  padding: 0.875rem 1rem;
+  padding: 0.875rem 2.5rem;
   font-size: 1rem;
   font-family: inherit;
   border: 1px solid var(--color-gray-300);
