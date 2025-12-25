@@ -1,0 +1,23 @@
+/*
+Theme Name: ICS Group
+Theme URI: https://icsgroup.com
+Author: ICS Group
+Author URI: https://icsgroup.com
+Description: Professional WordPress theme for ICS Group - OT/ICS Cybersecurity Solutions. Features include custom resources post type, advanced search and filtering, responsive design with smooth animations, and comprehensive security best practices.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ics-group
+Tags: custom-menu, custom-logo, featured-images, threaded-comments, translation-ready, blog, portfolio, two-columns
+
+ICS Group WordPress Theme, Copyright 2025
+ICS Group is distributed under the terms of the GNU GPL v2 or later.
+*/
+
+/*
+ * Main stylesheet is loaded from assets/css/styles.css
+ * This file contains only the required WordPress theme headers
+ */
