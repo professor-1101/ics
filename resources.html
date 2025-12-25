@@ -51,15 +51,30 @@
             </div>
         </section>
 
-        <!-- Filter Section -->
-        <section class="section-sm bg-gray-50" style="position: sticky; top: 64px; z-index: 40; border-bottom: 1px solid var(--color-gray-200);">
+        <!-- Filter & Search Section -->
+        <section class="section-sm bg-gray-50" style="position: sticky; top: 64px; z-index: 40; border-bottom: 1px solid var(--color-gray-200); padding: 1.5rem 0;">
             <div class="container">
-                <div class="flex flex-wrap gap-4 justify-center">
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search resources by title or keyword...">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap gap-4 justify-center" style="margin-top: 1.5rem;">
                     <button class="filter-btn active" data-filter="All">All</button>
                     <button class="filter-btn" data-filter="Whitepaper">Whitepaper</button>
                     <button class="filter-btn" data-filter="Case Study">Case Study</button>
                     <button class="filter-btn" data-filter="Blog">Blog</button>
                     <button class="filter-btn" data-filter="Report">Report</button>
+                </div>
+
+                <!-- Results Count -->
+                <div class="results-count" id="resultsCount">
+                    <span id="resultNumber">8</span> resources found
                 </div>
             </div>
         </section>
@@ -67,6 +82,16 @@
         <!-- Resources Grid -->
         <section class="section bg-white">
             <div class="container">
+                <!-- No Results Message -->
+                <div id="noResults" class="no-results" style="display: none;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <h3>No resources found</h3>
+                    <p>Try adjusting your search or filter to find what you're looking for.</p>
+                </div>
+
                 <div class="grid grid-cols-4" id="resourcesGrid">
                     <div class="resource-card" data-type="Whitepaper">
                         <div class="resource-image">

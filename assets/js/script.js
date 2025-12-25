@@ -4,31 +4,92 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Resource Filter Functionality
+    // Resource Filter and Search Functionality
     const filterButtons = document.querySelectorAll('.filter-btn');
     const resourceCards = document.querySelectorAll('.resource-card');
+    const searchInput = document.getElementById('searchInput');
+    const resultNumber = document.getElementById('resultNumber');
+    const noResults = document.getElementById('noResults');
+    let currentFilter = 'All';
+    let currentSearch = '';
 
-    if (filterButtons.length > 0 && resourceCards.length > 0) {
+    function updateResources() {
+        let visibleCount = 0;
+
+        resourceCards.forEach(card => {
+            const cardType = card.getAttribute('data-type');
+            const cardTitle = card.querySelector('h3').textContent.toLowerCase();
+            const cardText = card.querySelector('.card-text').textContent.toLowerCase();
+            const searchTerm = currentSearch.toLowerCase();
+
+            // Check filter
+            const matchesFilter = currentFilter === 'All' || cardType === currentFilter;
+
+            // Check search
+            const matchesSearch = searchTerm === '' ||
+                                 cardTitle.includes(searchTerm) ||
+                                 cardText.includes(searchTerm) ||
+                                 cardType.toLowerCase().includes(searchTerm);
+
+            if (matchesFilter && matchesSearch) {
+                card.classList.remove('hidden');
+                card.style.display = 'block';
+                card.style.animation = 'fadeIn 0.4s ease forwards';
+                visibleCount++;
+            } else {
+                card.classList.add('hidden');
+                setTimeout(() => {
+                    card.style.display = 'none';
+                }, 300);
+            }
+        });
+
+        // Update result count
+        if (resultNumber) {
+            resultNumber.textContent = visibleCount;
+        }
+
+        // Show/hide no results message
+        if (noResults) {
+            if (visibleCount === 0) {
+                noResults.style.display = 'block';
+                noResults.style.animation = 'fadeIn 0.4s ease forwards';
+            } else {
+                noResults.style.display = 'none';
+            }
+        }
+    }
+
+    // Filter button click handlers
+    if (filterButtons.length > 0) {
         filterButtons.forEach(button => {
             button.addEventListener('click', function() {
                 const filterValue = this.getAttribute('data-filter');
+                currentFilter = filterValue;
 
                 // Update active state
                 filterButtons.forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
 
-                // Filter resources with animation
-                resourceCards.forEach(card => {
-                    const cardType = card.getAttribute('data-type');
-
-                    if (filterValue === 'All' || cardType === filterValue) {
-                        card.style.display = 'block';
-                        card.style.animation = 'fadeIn 0.4s ease forwards';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
+                updateResources();
             });
+        });
+    }
+
+    // Search input handler
+    if (searchInput) {
+        searchInput.addEventListener('input', function(e) {
+            currentSearch = e.target.value;
+            updateResources();
+        });
+
+        // Clear search on ESC
+        searchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                searchInput.value = '';
+                currentSearch = '';
+                updateResources();
+            }
         });
     }
 
