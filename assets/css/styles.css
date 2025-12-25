@@ -1386,7 +1386,7 @@ label {
 
 .search-input {
   width: 100%;
-  padding: 1rem 1.5rem 1rem 3.5rem;
+  padding: 1rem 1.5rem 1rem 4rem;
   font-size: 1rem;
   border: 2px solid var(--color-gray-300);
   border-radius: var(--radius-lg);
