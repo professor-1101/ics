@@ -275,3 +275,20 @@ function ics_group_script_loader_tag( $tag, $handle ) {
 	return $tag;
 }
 add_filter( 'script_loader_tag', 'ics_group_script_loader_tag', 10, 2 );
+
+/**
+ * Add active class to Resources menu item on resource pages
+ */
+function ics_group_active_nav_class( $classes, $item ) {
+	// Check if this is the Resources menu item
+	if ( 'resource' === $item->object && 'post_type_archive' === $item->type ) {
+		// If we're on a resource archive or single resource page
+		if ( is_post_type_archive( 'resource' ) || is_singular( 'resource' ) ) {
+			$classes[] = 'current-menu-item';
+			$classes[] = 'current_page_item';
+		}
+	}
+	
+	return $classes;
+}
+add_filter( 'nav_menu_css_class', 'ics_group_active_nav_class', 10, 2 );
