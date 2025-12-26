@@ -286,14 +286,16 @@ header nav .current_page_item > a::after {
 }
 
 .mobile-menu nav a {
+  display: block;
   color: white;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  padding: 1.25rem 1.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.75rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   transition: all var(--transition-base);
   position: relative;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .mobile-menu nav a::before {
@@ -303,7 +305,7 @@ header nav .current_page_item > a::after {
   top: 0;
   width: 0;
   height: 100%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
   transition: width var(--transition-slow);
 }
 
@@ -314,10 +316,11 @@ header nav .current_page_item > a::after {
   width: 100%;
 }
 
+.mobile-menu nav a:hover,
 .mobile-menu nav a.active,
 .mobile-menu nav .current-menu-item > a,
 .mobile-menu nav .current_page_item > a {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.2);
   font-weight: 600;
 }
 
