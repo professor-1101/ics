@@ -1,0 +1,35 @@
+===============================================
+THEME SCREENSHOT INSTRUCTIONS
+===============================================
+
+WordPress themes should include a screenshot.png file in the
+theme root directory to show a preview in WordPress admin.
+
+SPECIFICATIONS:
+- Filename: screenshot.png
+- Size: 1200 x 900 pixels
+- Format: PNG
+- Location: /wp-content/themes/ics-group/screenshot.png
+
+HOW TO CREATE:
+1. Open your WordPress site homepage in a browser
+2. Take a screenshot of the full page
+3. Crop to 1200x900 pixels (4:3 ratio)
+4. Save as screenshot.png
+5. Upload to the theme directory
+
+OR USE A SCREENSHOT TOOL:
+- Mac: Cmd+Shift+4 (then crop in Preview)
+- Windows: Snipping Tool or Snip & Sketch
+- Online: Use https://www.browserstack.com/screenshots
+
+ALTERNATIVE:
+You can also screenshot the "What We Do" page or
+Resources page - any page that shows the theme design well.
+
+The theme will work without a screenshot, but it's
+recommended for better admin UX.
+
+Current Status: ⚠️  No screenshot.png present
+Installation: ✅ Theme installs fine without it
+Recommended: ✅ Add screenshot for better UX
