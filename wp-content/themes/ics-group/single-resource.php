@@ -78,7 +78,9 @@ get_header();
 			<!-- Article Content -->
 			<div class="article-content">
 				<div class="container" style="max-width: 48rem;">
-					<?php the_content(); ?>
+					<div class="content">
+						<?php the_content(); ?>
+					</div>
 
 					<!-- Call to Action -->
 					<div class="article-cta">

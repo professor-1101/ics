@@ -163,6 +163,21 @@ header nav {
   gap: var(--spacing-xl);
 }
 
+/* WordPress Menu Support */
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav li {
+  margin: 0;
+  padding: 0;
+}
+
 header nav a {
   font-size: 1.125rem;
   font-weight: 500;
@@ -176,11 +191,15 @@ header nav a:hover {
   color: var(--color-purple-800);
 }
 
-header nav a.active {
+header nav a.active,
+header nav .current-menu-item > a,
+header nav .current_page_item > a {
   color: var(--color-purple-800);
 }
 
-header nav a.active::after {
+header nav a.active::after,
+header nav .current-menu-item > a::after,
+header nav .current_page_item > a::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -250,6 +269,22 @@ header nav a.active::after {
   gap: 0;
 }
 
+/* WordPress Menu Support for Mobile */
+.mobile-menu nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  width: 100%;
+}
+
+.mobile-menu nav li {
+  margin: 0;
+  padding: 0;
+}
+
 .mobile-menu nav a {
   color: white;
   font-size: 1.25rem;
@@ -273,11 +308,15 @@ header nav a.active::after {
 }
 
 .mobile-menu nav a:hover::before,
-.mobile-menu nav a.active::before {
+.mobile-menu nav a.active::before,
+.mobile-menu nav .current-menu-item > a::before,
+.mobile-menu nav .current_page_item > a::before {
   width: 100%;
 }
 
-.mobile-menu nav a.active {
+.mobile-menu nav a.active,
+.mobile-menu nav .current-menu-item > a,
+.mobile-menu nav .current_page_item > a {
   background: rgba(255, 255, 255, 0.15);
   font-weight: 600;
 }
@@ -320,7 +359,8 @@ footer {
   padding: var(--spacing-3xl) 0;
 }
 
-footer .logo {
+footer .logo,
+footer .custom-logo {
   height: 2.5rem;
   width: auto;
   filter: brightness(0) invert(1); /* Make logo white */
@@ -1704,3 +1744,245 @@ label {
     justify-content: center;
   }
 }
+
+/* ===== WORDPRESS CONTENT STYLING ===== */
+.content {
+  max-width: 100%;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  font-family: var(--font-heading);
+  color: var(--color-gray-900);
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  line-height: 1.2;
+}
+
+.content h1 { font-size: 2.5rem; }
+.content h2 { font-size: 2rem; }
+.content h3 { font-size: 1.75rem; }
+.content h4 { font-size: 1.5rem; }
+.content h5 { font-size: 1.25rem; }
+.content h6 { font-size: 1.125rem; }
+
+.content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: var(--color-gray-700);
+  font-size: 1.125rem;
+}
+
+.content a {
+  color: var(--color-purple-800);
+  text-decoration: underline;
+  transition: color var(--transition-base);
+}
+
+.content a:hover {
+  color: var(--color-purple-900);
+}
+
+.content ul,
+.content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+  color: var(--color-gray-700);
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.content li {
+  margin-bottom: 0.75rem;
+}
+
+.content ul {
+  list-style: disc;
+}
+
+.content ol {
+  list-style: decimal;
+}
+
+.content strong {
+  font-weight: 700;
+  color: var(--color-gray-900);
+}
+
+.content em {
+  font-style: italic;
+}
+
+.content hr {
+  border: none;
+  border-top: 1px solid var(--color-gray-300);
+  margin: 2rem 0;
+}
+
+.content blockquote {
+  border-left: 4px solid var(--color-purple-800);
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: var(--color-gray-600);
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  margin: 2rem 0;
+}
+
+.content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+.content table th,
+.content table td {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-gray-300);
+  text-align: left;
+}
+
+.content table th {
+  background-color: var(--color-gray-100);
+  font-weight: 700;
+  color: var(--color-gray-900);
+}
+
+/* ===== WORDPRESS FORM STYLING ===== */
+.content input[type="text"],
+.content input[type="email"],
+.content input[type="tel"],
+.content input[type="url"],
+.content input[type="number"],
+.content input[type="date"],
+.content input[type="search"],
+.content select,
+.content textarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-family: var(--font-body);
+  color: var(--color-gray-900);
+  background-color: var(--color-white);
+  transition: border-color var(--transition-base);
+}
+
+.content input[type="text"]:focus,
+.content input[type="email"]:focus,
+.content input[type="tel"]:focus,
+.content input[type="url"]:focus,
+.content input[type="number"]:focus,
+.content input[type="date"]:focus,
+.content input[type="search"]:focus,
+.content select:focus,
+.content textarea:focus {
+  outline: none;
+  border-color: var(--color-purple-800);
+  box-shadow: 0 0 0 3px rgba(107, 70, 193, 0.1);
+}
+
+.content label {
+  display: block;
+  font-weight: 600;
+  color: var(--color-gray-900);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.content input[type="submit"],
+.content button[type="submit"] {
+  background-color: var(--color-purple-800);
+  color: var(--color-white);
+  padding: 0.875rem 2rem;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.content input[type="submit"]:hover,
+.content button[type="submit"]:hover {
+  background-color: var(--color-purple-900);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Contact Form 7 Specific */
+.wpcf7-form-control-wrap {
+  display: block;
+  width: 100%;
+}
+
+.wpcf7-not-valid-tip {
+  color: var(--color-red-600);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.wpcf7-response-output {
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+}
+
+.wpcf7-mail-sent-ok {
+  background-color: rgba(34, 197, 94, 0.1);
+  border: 1px solid var(--color-green-600);
+  color: var(--color-green-900);
+}
+
+.wpcf7-validation-errors,
+.wpcf7-mail-sent-ng {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--color-red-600);
+  color: var(--color-red-900);
+}
+
+.wpcf7-spinner {
+  margin-left: 1rem;
+}
+
+/* WordPress Block Editor Support */
+.wp-block-heading {
+  font-family: var(--font-heading);
+  color: var(--color-gray-900);
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  line-height: 1.2;
+}
+
+.wp-block-list {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+  color: var(--color-gray-700);
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.wp-block-separator {
+  border: none;
+  border-top: 1px solid var(--color-gray-300);
+  margin: 2rem 0;
+}
+
+.wp-block-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
